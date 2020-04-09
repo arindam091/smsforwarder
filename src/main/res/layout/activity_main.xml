@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/from_num"
+        android:layout_width="205dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Senders number"
+        android:inputType="phone"
+        android:onClick="contacts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/msg_body"
+        android:layout_width="205dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Msg contains"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_num" />
+
+    <EditText
+        android:id="@+id/to_num"
+        android:layout_width="205dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Forward To Number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msg_body"
+        android:onClick="contacts"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="205dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_num">
+
+        <RadioButton
+            android:id="@+id/btn_and"
+            android:layout_width="205dp"
+            android:layout_height="54dp"
+            android:text="Match All" />
+
+        <RadioButton
+            android:id="@+id/btn_or"
+            android:layout_width="205dp"
+            android:layout_height="54dp"
+            android:text="Match Any" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="151dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="511dp"
+        android:onClick="save"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_display"
+        android:layout_width="142dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="84dp"
+        android:onClick="display"
+        android:text="Display Rules"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
